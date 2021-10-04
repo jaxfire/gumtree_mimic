@@ -4,6 +4,7 @@ import 'package:gumtree_motors/common/colours.dart';
 import 'widgets/gumtree_icon.dart';
 import 'widgets/star_badge.dart';
 
+// TODO: Navigate to home after initialisation occurs
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 

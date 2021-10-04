@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'feature/splash_screen/presentation/splash_screen.dart';
+import 'feature/home/presentation/home_screen.dart';
 
 void main() {
   runApp(const GumtreeApp());
@@ -17,7 +17,7 @@ class GumtreeApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(),
+      home: const HomeScreen(),
     );
   }
 }

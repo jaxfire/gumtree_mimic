@@ -73,6 +73,8 @@ flutter:
     - family: Galano
       fonts:
         - asset: assets/fonts/GalanoGrotesqueAltRegular.otf
+        - asset: assets/fonts/GalanoGrotesqueMedium.otf
+          weight: 500
         - asset: assets/fonts/GalanoGrotesqueAltSemiBold.otf
           weight: 700
         - asset: assets/fonts/GalanoGrotesqueBold.otf
