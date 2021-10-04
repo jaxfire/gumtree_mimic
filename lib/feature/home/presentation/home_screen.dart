@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gumtree_motors/common/colours.dart';
 import 'package:gumtree_motors/feature/home/presentation/widgets/home_bottom_button_bar.dart';
 import 'package:gumtree_motors/feature/home/presentation/widgets/icon_bar.dart';
+import 'package:gumtree_motors/feature/home/presentation/widgets/product_grid_item.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -47,7 +48,19 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.grey[300],
                 child: GridView.count(
                   crossAxisCount: 2,
+                  childAspectRatio: 0.75,
                   children: [
+                    ProductGridItem(),
+                    ProductGridItem(),
+                    ProductGridItem(),
+                    ProductGridItem(),
+                    ProductGridItem(),
+                    ProductGridItem(),
+                    ProductGridItem(),
+                    ProductGridItem(),
+                    ProductGridItem(),
+                    ProductGridItem(),
+                    ProductGridItem(),
                     ProductGridItem(),
                   ],
                 ),
@@ -57,18 +70,6 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class ProductGridItem extends StatelessWidget {
-  const ProductGridItem({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      color: Colors.white,
-      child: FlutterLogo(),
     );
   }
 }
