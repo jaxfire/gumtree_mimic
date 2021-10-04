@@ -17,12 +17,17 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            color: Colors.blueGrey,
+          ColorFiltered(
+            colorFilter: ColorFilter.mode(darkGreen, BlendMode.multiply),
+            child: Image.asset(
+              'assets/images/splash_screen_background.jpg',
+              fit: BoxFit.fitHeight,
+              height: double.infinity,
+            ),
           ),
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.only(top: 16.0),
+              padding: const EdgeInsets.only(top: 20.0),
               child: Stack(
                 children: [
                   Align(

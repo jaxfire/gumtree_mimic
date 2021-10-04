@@ -11,16 +11,17 @@ class StarBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 200.0,
-      height: 200.0,
+      width: 180.0,
+      height: 180.0,
       child: Stack(
         children: [
           Align(
             alignment: Alignment.center,
+            // TODO: Use the correct star image
             child: Icon(
               Icons.star_rounded,
               color: lightGreen,
-              size: 200.0,
+              size: 180.0,
             ),
           ),
           Align(
