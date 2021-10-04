@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gumtree_motors/feature/common/colours.dart';
+import 'package:gumtree_motors/common/colours.dart';
 
 import 'gumtree_icon.dart';
 
