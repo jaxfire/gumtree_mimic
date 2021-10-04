@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gumtree_motors/common/colours.dart';
 import 'package:gumtree_motors/feature/home/presentation/widgets/home_bottom_button_bar.dart';
 import 'package:gumtree_motors/feature/home/presentation/widgets/icon_bar.dart';
-import 'package:gumtree_motors/feature/home/presentation/widgets/product_grid_item.dart';
+
+import 'widgets/home_list_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,6 +15,7 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
+            // TODO: Extract the search bar to its own widget.
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
@@ -43,29 +45,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             IconBar(),
-            Expanded(
-              child: Container(
-                color: Colors.grey[300],
-                child: GridView.count(
-                  crossAxisCount: 2,
-                  childAspectRatio: 0.75,
-                  children: [
-                    ProductGridItem(),
-                    ProductGridItem(),
-                    ProductGridItem(),
-                    ProductGridItem(),
-                    ProductGridItem(),
-                    ProductGridItem(),
-                    ProductGridItem(),
-                    ProductGridItem(),
-                    ProductGridItem(),
-                    ProductGridItem(),
-                    ProductGridItem(),
-                    ProductGridItem(),
-                  ],
-                ),
-              ),
-            ),
+            HomeListView(),
             HomeBottomButtonBar()
           ],
         ),
