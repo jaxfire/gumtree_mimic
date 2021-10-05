@@ -24,7 +24,6 @@ class HomeListView extends StatelessWidget {
         child: RefreshIndicator(
           backgroundColor: darkGreen,
           color: lightGreen,
-          // displacement: 46.0,
           edgeOffset: 94.0,
           displacement: 0.0,
           strokeWidth: 3.0,
