@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gumtree_motors/feature/home/domain/listing.dart';
 
 class ListingGridItem extends StatelessWidget {
-  const ListingGridItem({Key? key}) : super(key: key);
+  final Listing listing;
+  const ListingGridItem({Key? key, required this.listing}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +14,15 @@ class ListingGridItem extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              child: Placeholder(),
+              child: Image.network(
+                listing.images[0],
+              ),
             ),
             SizedBox(
               height: 8.0,
             ),
             Text(
-              '2017 Audi A5 2.0 TDI S line S Tronic (s/s) 2dr Couple Diesel Automatic',
+              listing.summary,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(fontSize: 13),
@@ -31,7 +35,7 @@ class ListingGridItem extends StatelessWidget {
               children: [
                 // TODO: Make the pound sign superscript.
                 Text(
-                  '£23,000',
+                  listing.price,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
