@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gumtree_motors/common/colours.dart';
 import 'package:gumtree_motors/feature/home/domain/listing_repository.dart';
 import 'package:gumtree_motors/feature/home/domain/recent_searches_repository.dart';
 import 'package:gumtree_motors/feature/home/presentation/widgets/listing_subtitle_row.dart';
@@ -20,27 +21,39 @@ class HomeListView extends StatelessWidget {
     return Expanded(
       child: Container(
         color: Colors.grey[300],
-        child: CustomScrollView(
-          slivers: [
-            SliverIconBar(),
-            ListingSubtitleRow(
-              leadingText: 'Just for you',
-              trailingText: 'United Kingdom',
-            ),
-            ListingGrid(
-              listings: ListingRepository.getListings(size: 4),
-            ),
-            ListingSubtitleRow(leadingText: 'Your Recent Searches'),
-            RecentSearchesRow(recentSearches: recentSearches),
-            ListingGrid(
-              listings: ListingRepository.getListings(size: 6),
-            ),
-            AdBanner(),
-            ListingGrid(
-              listings: ListingRepository.getListings(size: 20),
-            ),
-            AdBanner(),
-          ],
+        child: RefreshIndicator(
+          backgroundColor: darkGreen,
+          color: lightGreen,
+          // displacement: 46.0,
+          edgeOffset: 94.0,
+          displacement: 0.0,
+          strokeWidth: 3.0,
+          onRefresh: () {
+            // TODO: When state mgmt set up. Trigger a reload of items.
+            return Future.delayed(Duration(seconds: 2));
+          },
+          child: CustomScrollView(
+            slivers: [
+              SliverIconBar(),
+              ListingSubtitleRow(
+                leadingText: 'Just for you',
+                trailingText: 'United Kingdom',
+              ),
+              ListingGrid(
+                listings: ListingRepository.getListings(size: 4),
+              ),
+              ListingSubtitleRow(leadingText: 'Your Recent Searches'),
+              RecentSearchesRow(recentSearches: recentSearches),
+              ListingGrid(
+                listings: ListingRepository.getListings(size: 6),
+              ),
+              AdBanner(),
+              ListingGrid(
+                listings: ListingRepository.getListings(size: 20),
+              ),
+              AdBanner(),
+            ],
+          ),
         ),
       ),
     );
