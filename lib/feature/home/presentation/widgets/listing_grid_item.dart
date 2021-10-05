@@ -22,7 +22,7 @@ class ListingGridItem extends StatelessWidget {
               height: 8.0,
             ),
             Text(
-              listing.summary,
+              listing.description,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(fontSize: 13),

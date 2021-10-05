@@ -4,8 +4,8 @@ class Listing {
   final String price;
   final String location;
   final String userName;
-  final String summary;
+  final String description;
 
   const Listing(this.images, this.title, this.price, this.location,
-      this.userName, this.summary);
+      this.userName, this.description);
 }

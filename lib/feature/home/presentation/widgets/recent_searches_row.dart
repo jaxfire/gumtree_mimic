@@ -11,7 +11,7 @@ class RecentSearchesRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Container(
-        margin: const EdgeInsets.only(bottom: 10.0),
+        margin: const EdgeInsets.only(bottom: 16.0),
         child: SizedBox(
           height: 100.0,
           child: ListView(
