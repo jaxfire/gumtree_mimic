@@ -18,5 +18,9 @@ class RecentSearchesRepository {
           'https://pbs.twimg.com/profile_images/1080545769034108928/CEzHCTpI_400x400.jpg',
           'Cats',
         ),
+        RecentSearch(
+          'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-tools-hanging-on-wall-royalty-free-image-760251967-1563391812.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*',
+          'Tools',
+        ),
       ];
 }

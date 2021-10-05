@@ -3,22 +3,26 @@ import 'package:gumtree_motors/feature/home/domain/recent_search.dart';
 
 class RecentSearchesRow extends StatelessWidget {
   final List<RecentSearch> recentSearches;
+
   const RecentSearchesRow({Key? key, required this.recentSearches})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SliverFixedExtentList(
-      itemExtent: 5,
-      delegate: SliverChildBuilderDelegate(
-        (context, index) => Padding(
-          padding: const EdgeInsets.only(bottom: 20),
-          // 7
-          child: RecentSearchListItem(
-            recentSearch: recentSearches[index],
+    return SliverToBoxAdapter(
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 10.0),
+        child: SizedBox(
+          height: 100.0,
+          child: ListView(
+            shrinkWrap: true,
+            itemExtent: 108.0,
+            scrollDirection: Axis.horizontal,
+            children: recentSearches.map((item) {
+              return RecentSearchListItem(recentSearch: item);
+            }).toList(),
           ),
         ),
-        childCount: recentSearches.length,
       ),
     );
   }
@@ -33,9 +37,41 @@ class RecentSearchListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100,
-      height: 100,
-      color: Colors.blue,
+      margin: EdgeInsets.only(left: 8.0),
+      width: 100.0,
+      height: 100.0,
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.network(
+            recentSearch.image,
+            fit: BoxFit.cover,
+          ),
+          Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                stops: [0.4, 1.0],
+                colors: [
+                  Colors.transparent,
+                  Colors.black,
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 4.0, left: 4.0),
+            child: Align(
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                recentSearch.searchTerm,
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
