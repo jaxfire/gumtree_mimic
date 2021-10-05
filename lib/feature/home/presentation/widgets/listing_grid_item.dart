@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ProductGridItem extends StatelessWidget {
-  const ProductGridItem({Key? key}) : super(key: key);
+class ListingGridItem extends StatelessWidget {
+  const ListingGridItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

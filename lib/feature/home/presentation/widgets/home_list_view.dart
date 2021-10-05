@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gumtree_motors/feature/home/presentation/widgets/product_grid_item.dart';
+import 'package:gumtree_motors/feature/home/presentation/widgets/listing_subtitle_row.dart';
 
 import 'icon_bar.dart';
-import 'product_list_subtitle_row.dart';
+import 'listing_grid_item.dart';
 
 class HomeListView extends StatelessWidget {
   const HomeListView({
@@ -17,7 +17,7 @@ class HomeListView extends StatelessWidget {
         child: CustomScrollView(
           slivers: [
             SliverIconBar(),
-            ProductListSubtitleRow(
+            ListingSubtitleRow(
               leadingText: 'Just for you',
               trailingText: 'United Kingdom',
             ),
@@ -29,18 +29,18 @@ class HomeListView extends StatelessWidget {
                 childAspectRatio: 0.75,
                 // shrinkWrap: true,
                 children: [
-                  ProductGridItem(),
-                  ProductGridItem(),
-                  ProductGridItem(),
-                  ProductGridItem(),
-                  ProductGridItem(),
-                  ProductGridItem(),
-                  ProductGridItem(),
-                  ProductGridItem(),
-                  ProductGridItem(),
-                  ProductGridItem(),
-                  ProductGridItem(),
-                  ProductGridItem(),
+                  ListingGridItem(),
+                  ListingGridItem(),
+                  ListingGridItem(),
+                  ListingGridItem(),
+                  ListingGridItem(),
+                  ListingGridItem(),
+                  ListingGridItem(),
+                  ListingGridItem(),
+                  ListingGridItem(),
+                  ListingGridItem(),
+                  ListingGridItem(),
+                  ListingGridItem(),
                 ],
               ),
             ),

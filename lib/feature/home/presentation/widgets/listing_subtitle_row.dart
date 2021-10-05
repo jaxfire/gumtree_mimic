@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class ProductListSubtitleRow extends StatelessWidget {
+class ListingSubtitleRow extends StatelessWidget {
   final String leadingText;
   final String? trailingText;
 
-  const ProductListSubtitleRow(
+  const ListingSubtitleRow(
       {Key? key, required this.leadingText, this.trailingText})
       : super(key: key);
 
