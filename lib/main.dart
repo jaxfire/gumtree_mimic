@@ -13,7 +13,7 @@ class GumtreeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Gumtree Motors',
-      // TODO: Inject in ThemeData
+      // TODO: Inject in ThemeData?
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
