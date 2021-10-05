@@ -4,17 +4,16 @@ import 'package:gumtree_motors/common/colours.dart';
 import 'widgets/gumtree_icon.dart';
 import 'widgets/star_badge.dart';
 
-// TODO: Navigate to home after initialisation occurs
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
-  _SplashScreenState createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
   Widget build(BuildContext context) {
+    // TODO: Move this logic to Domain Bloc
+    Future.delayed(const Duration(milliseconds: 3500), () {
+      Navigator.pushNamed(context, '/home');
+    });
+
     return Scaffold(
       body: Stack(
         children: [

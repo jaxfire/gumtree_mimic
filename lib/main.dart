@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'feature/home/presentation/home_screen.dart';
+import 'package:gumtree_motors/feature/home/presentation/home_screen.dart';
+import 'package:gumtree_motors/feature/splash_screen/presentation/splash_screen.dart';
 
 void main() {
   runApp(const GumtreeApp());
@@ -17,7 +17,11 @@ class GumtreeApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const SplashScreen(),
+        '/home': (context) => const HomeScreen(),
+      },
     );
   }
 }
