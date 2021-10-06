@@ -6,9 +6,6 @@ class ListDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Extract the arguments from the current ModalRoute
-    // settings and cast them as ListDetailScreenArguments.
-
     ListDetailScreenArguments? args;
     if (ModalRoute.of(context)!.settings.arguments != null) {
       args = ModalRoute.of(context)!.settings.arguments
@@ -19,9 +16,6 @@ class ListDetailScreen extends StatelessWidget {
       body: (args == null) ? buildInvalidArgs() : buildScreen(args),
     );
   }
-
-  @override
-  String toStringShort() {}
 
   Widget buildInvalidArgs() {
     return Center(
