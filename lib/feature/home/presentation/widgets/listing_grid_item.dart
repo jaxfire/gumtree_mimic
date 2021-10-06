@@ -8,6 +8,7 @@ class ListingGridItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 2.0,
       color: Colors.white,
       child: Padding(
         padding: EdgeInsets.all(8.0),
