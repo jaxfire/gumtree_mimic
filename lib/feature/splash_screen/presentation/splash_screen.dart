@@ -15,10 +15,10 @@ class SplashScreen extends StatelessWidget {
       create: (context) => SplashScreenCubit(),
       child: BlocListener<SplashScreenCubit, SplashScreenState>(
         listener: (BuildContext context, state) {
-          // if (state is SplashScreenComplete) {
-          //   Navigator.of(context).pushNamedAndRemoveUntil(
-          //       '/home_screen', (Route<dynamic> route) => false);
-          // }
+          if (state is SplashScreenComplete) {
+            Navigator.of(context).pushNamedAndRemoveUntil(
+                '/home_screen', (Route<dynamic> route) => false);
+          }
         },
         child: Scaffold(
           backgroundColor: darkGreen,
