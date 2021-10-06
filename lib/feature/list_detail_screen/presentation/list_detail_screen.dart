@@ -15,30 +15,14 @@ class ListDetailScreen extends StatelessWidget {
         scrollDirection: Axis.vertical,
         slivers: [
           AppBarWidget(),
-          // SliverFixedExtentList(
-          //   itemExtent: 110,
-          //   delegate: SliverChildBuilderDelegate(
-          //     (context, index) => Padding(
-          //       padding: const EdgeInsets.only(bottom: 20),
-          //       // 7
-          //       child: Container(
-          //         width: 50.0,
-          //         height: 50.0,
-          //         color: Colors.red,
-          //         margin: EdgeInsets.all(10.0),
-          //       ),
-          //     ),
-          //     childCount: 3,
-          //   ),
-          // ),
           SliverToBoxAdapter(
             child: Container(
-              height: 100.0,
+              height: 300.0,
               width: double.infinity,
               color: Colors.blue,
             ),
           ),
-          SliverFillRemaining()
+          SliverFillRemaining(),
         ],
       ),
     );

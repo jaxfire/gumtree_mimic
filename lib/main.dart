@@ -22,7 +22,7 @@ class GumtreeApp extends StatelessWidget {
       routes: {
         '/': (context) => const SplashScreen(),
         '/home_screen': (context) => const HomeScreen(),
-        '/list_detail_screen': (context) => const ListDetailScreen(),
+        '/list_detail_screen': (context) => ListDetailScreen(),
       },
     );
   }
