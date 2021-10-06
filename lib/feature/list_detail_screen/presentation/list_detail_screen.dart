@@ -1,47 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:gumtree_motors/feature/list_detail_screen/list_detail_screen_arguments.dart';
+import 'package:gumtree_motors/feature/list_detail_screen/presentation/widgets/app_bar_gallery.dart';
 
 class ListDetailScreen extends StatelessWidget {
   const ListDetailScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    ListDetailScreenArguments? args;
-    if (ModalRoute.of(context)!.settings.arguments != null) {
-      args = ModalRoute.of(context)!.settings.arguments
-          as ListDetailScreenArguments;
-    }
+    ListDetailScreenArguments args =
+        ModalRoute.of(context)!.settings.arguments as ListDetailScreenArguments;
 
     return Scaffold(
-      body: (args == null) ? buildInvalidArgs() : buildScreen(args),
-    );
-  }
-
-  Widget buildInvalidArgs() {
-    return Center(
-      child: Text('Invalid Args'),
-    );
-  }
-
-  Widget buildScreen(ListDetailScreenArguments args) {
-    return Center(
-      child: Column(
-        children: [
-          Text(
-            args.listing.userName,
+      body: CustomScrollView(
+        scrollDirection: Axis.vertical,
+        slivers: [
+          AppBarWidget(),
+          // SliverFixedExtentList(
+          //   itemExtent: 110,
+          //   delegate: SliverChildBuilderDelegate(
+          //     (context, index) => Padding(
+          //       padding: const EdgeInsets.only(bottom: 20),
+          //       // 7
+          //       child: Container(
+          //         width: 50.0,
+          //         height: 50.0,
+          //         color: Colors.red,
+          //         margin: EdgeInsets.all(10.0),
+          //       ),
+          //     ),
+          //     childCount: 3,
+          //   ),
+          // ),
+          SliverToBoxAdapter(
+            child: Container(
+              height: 100.0,
+              width: double.infinity,
+              color: Colors.blue,
+            ),
           ),
-          Text(
-            args.listing.title,
-          ),
-          Text(
-            args.listing.price,
-          ),
-          Text(
-            args.listing.location,
-          ),
-          Text(
-            args.listing.description,
-          ),
+          SliverFillRemaining()
         ],
       ),
     );
