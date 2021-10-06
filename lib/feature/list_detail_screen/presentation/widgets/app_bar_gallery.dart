@@ -39,6 +39,7 @@ class AppBarWidget extends StatelessWidget {
 
 // TODO: Move to separate file
 // TODO: Get state from BloC/Cubit instead of StatefulWidget
+// TODO: Precache images
 class GalleryPager extends StatefulWidget {
   const GalleryPager({Key? key}) : super(key: key);
 
