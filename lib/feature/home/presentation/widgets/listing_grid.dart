@@ -19,7 +19,7 @@ class ListingGrid extends StatelessWidget {
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200.0,
           mainAxisSpacing: 10,
-          crossAxisSpacing: 10,
+          crossAxisSpacing: 0,
           childAspectRatio: 0.75,
         ),
         delegate: SliverChildBuilderDelegate(
