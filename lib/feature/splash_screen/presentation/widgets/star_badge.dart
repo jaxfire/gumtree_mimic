@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gumtree_motors/common/colours.dart';
 
 import 'gumtree_icon.dart';
@@ -17,11 +18,10 @@ class StarBadge extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.center,
-            // TODO: Use the correct star image
-            child: Icon(
-              Icons.star_rounded,
+            child: FaIcon(
+              FontAwesomeIcons.certificate,
               color: lightGreen,
-              size: 180.0,
+              size: 130.0,
             ),
           ),
           Align(

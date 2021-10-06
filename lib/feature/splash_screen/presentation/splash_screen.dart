@@ -85,7 +85,7 @@ class SplashScreen extends StatelessWidget {
                       Align(
                         alignment: Alignment.centerRight,
                         child: Transform.rotate(
-                          angle: 0.35,
+                          angle: 0.33,
                           child: StarBadge(),
                         ),
                       ),
