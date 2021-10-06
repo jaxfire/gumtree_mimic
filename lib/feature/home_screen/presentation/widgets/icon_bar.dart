@@ -55,7 +55,7 @@ class SliverIconBar extends StatelessWidget {
                 color: Colors.grey.withOpacity(0.5),
                 spreadRadius: 1,
                 blurRadius: 2,
-                offset: Offset(0, 1), // changes position of shadow
+                offset: Offset(0, 1),
               ),
             ],
           ),

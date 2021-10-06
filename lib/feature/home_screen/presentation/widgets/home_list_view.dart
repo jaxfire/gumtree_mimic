@@ -20,7 +20,7 @@ class HomeListView extends StatelessWidget {
 
     return Expanded(
       child: Container(
-        color: Colors.grey[300],
+        color: lightGrey,
         child: RefreshIndicator(
           backgroundColor: darkGreen,
           color: lightGreen,
