@@ -15,17 +15,17 @@ class SplashScreen extends StatelessWidget {
       create: (context) => SplashScreenCubit(),
       child: BlocListener<SplashScreenCubit, SplashScreenState>(
         listener: (BuildContext context, state) {
-          if (state is SplashScreenComplete) {
-            Navigator.of(context).pushNamedAndRemoveUntil(
-                '/home_screen', (Route<dynamic> route) => false);
-          }
+          // if (state is SplashScreenComplete) {
+          //   Navigator.of(context).pushNamedAndRemoveUntil(
+          //       '/home_screen', (Route<dynamic> route) => false);
+          // }
         },
         child: Scaffold(
           backgroundColor: darkGreen,
           body: Stack(
             children: [
               ColorFiltered(
-                colorFilter: ColorFilter.mode(darkGreen, BlendMode.multiply),
+                colorFilter: ColorFilter.mode(darkGreen, BlendMode.hardLight),
                 child: Image.asset(
                   'assets/images/splash_screen_background.jpg',
                   fit: BoxFit.fitHeight,
@@ -39,34 +39,37 @@ class SplashScreen extends StatelessWidget {
                     children: [
                       Align(
                         alignment: Alignment.topCenter,
-                        child: Column(
-                          children: [
-                            GumtreeIcon(
-                              size: 40.0,
-                              colour: lightGreen,
-                            ),
-                            SizedBox(
-                              height: 10.0,
-                            ),
-                            Text(
-                              'Gumtree',
-                              style: TextStyle(
-                                fontFamily: 'Galano',
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white,
-                                letterSpacing: 1.2,
-                                fontSize: 21.0,
+                        child: Transform.translate(
+                          offset: Offset(0.0, 62.0),
+                          child: Column(
+                            children: [
+                              GumtreeIcon(
+                                size: 40.0,
+                                colour: lightGreen,
                               ),
-                            ),
-                            SizedBox(
-                              height: 10.0,
-                            ),
-                            Text(
-                              'Buy. Sell.',
-                              style: TextStyle(
-                                  color: Colors.white, fontSize: 17.0),
-                            ),
-                          ],
+                              SizedBox(
+                                height: 10.0,
+                              ),
+                              Text(
+                                'Gumtree',
+                                style: TextStyle(
+                                  fontFamily: 'Galano',
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white,
+                                  letterSpacing: 1.2,
+                                  fontSize: 21.0,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10.0,
+                              ),
+                              Text(
+                                'Buy. Sell.',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 17.0),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       Align(
