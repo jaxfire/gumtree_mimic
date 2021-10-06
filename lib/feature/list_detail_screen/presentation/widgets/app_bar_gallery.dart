@@ -94,6 +94,7 @@ class _GalleryPagerState extends State<GalleryPager> {
           alignment: Alignment.bottomRight,
           child: GalleryPageIndicator(
             pageNumber: currentPageNumber + 1,
+            numberOfPages: imageWidgets.length,
           ),
         ),
       ],
@@ -103,8 +104,10 @@ class _GalleryPagerState extends State<GalleryPager> {
 
 class GalleryPageIndicator extends StatelessWidget {
   final int pageNumber;
+  final int numberOfPages;
 
-  const GalleryPageIndicator({Key? key, required this.pageNumber})
+  const GalleryPageIndicator(
+      {Key? key, required this.pageNumber, required this.numberOfPages})
       : super(key: key);
 
   @override
@@ -128,7 +131,7 @@ class GalleryPageIndicator extends StatelessWidget {
             width: 4.0,
           ),
           Text(
-            '$pageNumber/20',
+            '$pageNumber/$numberOfPages',
             style: TextStyle(color: Colors.white),
           ),
         ],
