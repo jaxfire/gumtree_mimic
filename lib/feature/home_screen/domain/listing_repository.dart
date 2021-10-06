@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:gumtree_motors/feature/home/domain/listing.dart';
+import 'listing.dart';
 
 class ListingRepository {
   static List<Listing> getListings({int? size}) {

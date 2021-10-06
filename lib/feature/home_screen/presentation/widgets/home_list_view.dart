@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gumtree_motors/common/colours.dart';
-import 'package:gumtree_motors/feature/home/domain/listing_repository.dart';
-import 'package:gumtree_motors/feature/home/domain/recent_searches_repository.dart';
-import 'package:gumtree_motors/feature/home/presentation/widgets/listing_subtitle_row.dart';
+import 'package:gumtree_motors/feature/home_screen/domain/listing_repository.dart';
+import 'package:gumtree_motors/feature/home_screen/domain/recent_searches_repository.dart';
+import 'package:gumtree_motors/feature/home_screen/presentation/widgets/listing_subtitle_row.dart';
 
 import 'ad_banner.dart';
 import 'icon_bar.dart';

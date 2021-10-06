@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gumtree_motors/common/colours.dart';
-import 'package:gumtree_motors/feature/home/presentation/widgets/home_bottom_button_bar.dart';
-import 'package:gumtree_motors/feature/home/presentation/widgets/home_search_bar.dart';
+import 'package:gumtree_motors/feature/home_screen/presentation/widgets/home_bottom_button_bar.dart';
+import 'package:gumtree_motors/feature/home_screen/presentation/widgets/home_search_bar.dart';
 
 import 'widgets/home_list_view.dart';
 

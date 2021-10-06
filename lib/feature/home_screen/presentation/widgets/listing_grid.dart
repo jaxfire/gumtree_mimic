@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gumtree_motors/feature/home/domain/listing.dart';
+import 'package:gumtree_motors/feature/home_screen/domain/listing.dart';
 
 import 'listing_grid_item.dart';
 

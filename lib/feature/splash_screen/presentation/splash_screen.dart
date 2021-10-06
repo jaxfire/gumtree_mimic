@@ -17,7 +17,7 @@ class SplashScreen extends StatelessWidget {
         listener: (BuildContext context, state) {
           if (state is SplashScreenComplete) {
             Navigator.of(context).pushNamedAndRemoveUntil(
-                '/home', (Route<dynamic> route) => false);
+                '/home_screen', (Route<dynamic> route) => false);
           }
         },
         child: Scaffold(

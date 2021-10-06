@@ -1,4 +1,4 @@
-import 'package:gumtree_motors/feature/home/domain/recent_search.dart';
+import 'recent_search.dart';
 
 class RecentSearchesRepository {
   static List<RecentSearch> getRecentSearches() => const [

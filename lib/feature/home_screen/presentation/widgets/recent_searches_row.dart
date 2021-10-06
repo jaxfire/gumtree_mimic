@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gumtree_motors/feature/home/domain/recent_search.dart';
+import 'package:gumtree_motors/feature/home_screen/domain/recent_search.dart';
 
 class RecentSearchesRow extends StatelessWidget {
   final List<RecentSearch> recentSearches;
