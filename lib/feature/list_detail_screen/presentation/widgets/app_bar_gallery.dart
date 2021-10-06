@@ -37,6 +37,8 @@ class AppBarWidget extends StatelessWidget {
   }
 }
 
+// TODO: Move to separate file
+// TODO: Get state from BloC/Cubit instead of StatefulWidget
 class GalleryPager extends StatefulWidget {
   const GalleryPager({Key? key}) : super(key: key);
 
@@ -135,6 +137,7 @@ class GalleryPageIndicator extends StatelessWidget {
   }
 }
 
+// TODO: Move to a separate file.
 class MyImageWidget extends StatelessWidget {
   final String imageUrl;
 
