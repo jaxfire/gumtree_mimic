@@ -31,6 +31,7 @@ class AppBarWidget extends StatelessWidget {
       pinned: true,
       elevation: 0,
       flexibleSpace: FlexibleSpaceBar(
+        collapseMode: CollapseMode.pin,
         background: GalleryPager(),
       ),
     );
