@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:gumtree_motors/feature/list_detail_screen/list_detail_screen_arguments.dart';
 
 class ListingDetailHeaderSection extends StatelessWidget {
+  final ListDetailScreenArguments listing;
+
   const ListingDetailHeaderSection({
     Key? key,
-    required this.args,
+    required this.listing,
   }) : super(key: key);
-
-  final ListDetailScreenArguments args;
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +22,14 @@ class ListingDetailHeaderSection extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  args.listing.title,
+                  listing.listing.title,
                   style: TextStyle(fontSize: 18.0),
                 ),
                 SizedBox(
                   height: 22.0,
                 ),
                 Text(
-                  args.listing.price,
+                  listing.listing.price,
                   style: TextStyle(fontSize: 30.0),
                 ),
                 SizedBox(
@@ -43,7 +43,7 @@ class ListingDetailHeaderSection extends StatelessWidget {
                       size: 18.0,
                     ),
                     Text(
-                      args.listing.location,
+                      listing.listing.location,
                       style: TextStyle(color: Colors.blue),
                     ),
                   ],

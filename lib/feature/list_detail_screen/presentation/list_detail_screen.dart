@@ -7,6 +7,7 @@ import 'package:gumtree_motors/feature/list_detail_screen/presentation/widgets/l
 import 'package:gumtree_motors/feature/list_detail_screen/presentation/widgets/listing_bottom_bar/listing_bottom_bar_container.dart';
 import 'package:gumtree_motors/feature/list_detail_screen/presentation/widgets/listing_detail_expandable_section.dart';
 import 'package:gumtree_motors/feature/list_detail_screen/presentation/widgets/listing_detail_header_section.dart';
+import 'package:gumtree_motors/feature/list_detail_screen/presentation/widgets/listing_detail_tabbed_section.dart';
 import 'package:gumtree_motors/feature/list_detail_screen/presentation/widgets/listing_detail_user_section.dart';
 
 class ListDetailScreen extends StatelessWidget {
@@ -26,7 +27,7 @@ class ListDetailScreen extends StatelessWidget {
               scrollDirection: Axis.vertical,
               slivers: [
                 ImageGalleryAppBar(),
-                ListingDetailHeaderSection(args: args),
+                ListingDetailHeaderSection(listing: args),
                 ListingDetailUserSection(),
                 ListingDetailExpandableSection(
                   title: 'Looking for car finance?',
@@ -39,6 +40,7 @@ class ListDetailScreen extends StatelessWidget {
                   margin: EdgeInsets.only(top: 0.0),
                   padding: EdgeInsets.zero,
                 ),
+                ListingDetailTabbedSection(listing: args),
                 SliverFillRemaining(),
               ],
             ),

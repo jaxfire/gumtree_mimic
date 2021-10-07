@@ -2,4 +2,5 @@
 
 A recreation of the Gumtree Motors Android app UI.
 
-<img src="app_in_action_1.gif" width="300">
+The GIF is running at 5fps the actual app is running at 60fps :p
+<img src="app_in_action_.gif" width="300">
