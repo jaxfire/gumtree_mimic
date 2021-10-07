@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gumtree_motors/common/widgets/fake_admob_image.dart';
 
 class AdBanner extends StatelessWidget {
   const AdBanner({Key? key}) : super(key: key);
@@ -16,10 +17,7 @@ class AdBanner extends StatelessWidget {
               child: Stack(
                 fit: StackFit.passthrough,
                 children: [
-                  Image.network(
-                    'https://developer.android.com/distribute/images/cards/admob-logo_2x.png',
-                    fit: BoxFit.contain,
-                  ),
+                  FakeAdmobImage(),
                 ],
               ),
             ),

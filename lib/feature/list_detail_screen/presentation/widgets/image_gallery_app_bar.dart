@@ -3,8 +3,8 @@ import 'package:gumtree_motors/common/colours.dart';
 
 const expandedHeight = 380.0;
 
-class AppBarWidget extends StatelessWidget {
-  const AppBarWidget({Key? key});
+class ImageGalleryAppBar extends StatelessWidget {
+  const ImageGalleryAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
