@@ -16,7 +16,7 @@ class ListingDetailTabContent extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         color: Colors.blue,
         child: Center(
-          child: Text(listing.description),
+          child: Text(listing.description.summary),
         ),
       ),
     );
