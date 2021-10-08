@@ -14,8 +14,8 @@ class ListingDetailTabContent extends StatelessWidget {
     return SliverToBoxAdapter(
       child: Container(
         padding: EdgeInsets.all(16.0),
-        color: Colors.blue,
         child: Center(
+          // TODO: // Show correct description content base on which tab is selected.
           child: Text(listing.description.summary),
         ),
       ),

@@ -15,6 +15,7 @@ class ListingDetailTabHeader extends StatelessWidget {
       child: TabBar(
         labelColor: Colors.black,
         indicatorColor: Colors.black,
+        // TODO: Show correct tab headers
         tabs: [
           Tab(text: 'Tab 1'),
           Tab(text: 'Tab 2'),
