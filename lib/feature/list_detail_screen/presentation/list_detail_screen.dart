@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gumtree_motors/common/colours.dart';
 import 'package:gumtree_motors/common/widgets/fake_admob_image.dart';
+import 'package:gumtree_motors/feature/home_screen/domain/listing.dart';
 import 'package:gumtree_motors/feature/list_detail_screen/list_detail_screen_arguments.dart';
 import 'package:gumtree_motors/feature/list_detail_screen/presentation/widgets/image_gallery_app_bar.dart';
 import 'package:gumtree_motors/feature/list_detail_screen/presentation/widgets/listing_bottom_bar/listing_bottom_bar_chat.dart';
@@ -20,22 +21,23 @@ class ListDetailScreen extends StatefulWidget {
 }
 
 class _ListDetailScreenState extends State<ListDetailScreen> {
-  int selectedTab = 0;
+  int selectedTabIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    ListDetailScreenArguments args =
-        ModalRoute.of(context)!.settings.arguments as ListDetailScreenArguments;
+    Listing listing = (ModalRoute.of(context)!.settings.arguments
+            as ListDetailScreenArguments)
+        .listing;
 
     return DefaultTabController(
-      length: 2,
+      length: getTabLength(listing),
       child: Builder(
         builder: (BuildContext context) {
           final TabController tabController = DefaultTabController.of(context)!;
           tabController.addListener(() {
             if (!tabController.indexIsChanging) {
               setState(() {
-                selectedTab = tabController.index;
+                selectedTabIndex = tabController.index;
               });
             }
           });
@@ -48,7 +50,7 @@ class _ListDetailScreenState extends State<ListDetailScreen> {
                     scrollDirection: Axis.vertical,
                     slivers: [
                       ImageGalleryAppBar(),
-                      ListingDetailHeaderSection(listing: args.listing),
+                      ListingDetailHeaderSection(listing: listing),
                       ListingDetailUserSection(),
                       ListingDetailExpandableSection(
                         title: 'Looking for car finance?',
@@ -61,8 +63,12 @@ class _ListDetailScreenState extends State<ListDetailScreen> {
                         margin: EdgeInsets.only(top: 0.0),
                         padding: EdgeInsets.zero,
                       ),
-                      ListingDetailTabHeader(listing: args.listing),
-                      ListingDetailTabContent(listing: args.listing),
+                      ListingDetailTabHeader(listing: listing),
+                      ListingDetailTabContent(
+                        listing: listing,
+                        selectedTabIndex: selectedTabIndex,
+                        margin: EdgeInsets.zero,
+                      ),
                       SliverFillRemaining(),
                     ],
                   ),
@@ -79,5 +85,18 @@ class _ListDetailScreenState extends State<ListDetailScreen> {
         },
       ),
     );
+  }
+
+  int getTabLength(Listing listing) {
+    int numOfTabs = 1; // We will always have summary
+
+    if (listing.description.specs != null) {
+      numOfTabs++;
+    }
+
+    if (listing.description.features != null) {
+      numOfTabs++;
+    }
+    return numOfTabs;
   }
 }
